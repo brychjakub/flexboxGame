@@ -1,0 +1,112 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.box {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 33.333%;
+    flex: 1;
+    
+}
+ 
+.outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0; 
+    animation: slowAppearAnimation 2s ease forwards; 
+    flex-direction: column;
+}
+
+@keyframes slowAppearAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw; 
+    height: 45vw; 
+}
+
+
+.box1 {
+    background-color: #3498db;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center; 
+    justify-content: center; }
+
+.box1:hover {
+    background-color: #1abc9c;
+}
+
+.box:hover {
+    transition: transform 0.9s ease; 
+    transform: scale(1.1);
+}
+
+.box:not(:hover) {
+    transition: transform 0.5s ease; 
+    transform: scale(1); 
+}
+
+.box2 {
+    order: 2;
+    }
+
+.box3 {
+    order: 3;
+    }
+
+.box4 {
+    order: 4;
+    }
+
+.box5 {
+    order: 5;
+    }
+
+.box6 {
+    order: 6;
+    }
+
+.box7 {
+    order: 7;
+    }
+
+.box8 {
+    order: 8;
+    }
+
+.box9 {
+    order: 9;
+    }
+
+.animated-image {
+        width: 0; 
+        height: 0; 
+        opacity: 0; 
+        transition: width 1s, height 1s, opacity 1s; 
+      }
+      
+.animated-image.animate {
+        width: 200px; 
+        height: 200px; 
+        opacity: 1; 
+      }
